@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\OpenCV.2.4.10\build\native\OpenCV.props" Condition="Exists('..\packages\OpenCV.2.4.10\build\native\OpenCV.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -58,7 +57,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>lib\libzbar-0.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>lib\libzbar-0.lib;lib\opencv_core2410d.lib;lib\opencv_highgui2410d.lib;lib\opencv_imgproc2410d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -102,20 +101,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="libiconv-2.dll" />
-    <None Include="libjpeg-7.dll" />
-    <None Include="libMagickCore-2.dll" />
-    <None Include="libMagickWand-2.dll" />
-    <None Include="libpng12-0.dll" />
-    <None Include="libtiff-3.dll" />
-    <None Include="libxml2-2.dll" />
-    <None Include="libzbar-0.dll" />
-    <None Include="packages.config" />
-    <None Include="zlib1.dll" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\packages\OpenCV.2.4.10\build\native\OpenCV.targets" Condition="Exists('..\packages\OpenCV.2.4.10\build\native\OpenCV.targets')" />
-  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
 </Project>
