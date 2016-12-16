@@ -102,6 +102,18 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="libiconv-2.dll" />
+    <None Include="libjpeg-7.dll" />
+    <None Include="libMagickCore-2.dll" />
+    <None Include="libMagickWand-2.dll" />
+    <None Include="libpng12-0.dll" />
+    <None Include="libtiff-3.dll" />
+    <None Include="libxml2-2.dll" />
+    <None Include="libzbar-0.dll" />
+    <None Include="packages.config" />
+    <None Include="zlib1.dll" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
 </Project>
